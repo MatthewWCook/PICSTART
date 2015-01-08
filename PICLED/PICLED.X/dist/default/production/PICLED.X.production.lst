@@ -1,0 +1,325 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.33 build 59893 
+                                                                                               Thu Jan 08 13:06:12 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 59893
+     1                           	processor	18F45K50
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    10                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    11  0000                     _LATBbits	set	3978
+    12  0000                     _OSCCON	set	4051
+    13  0000                     _TRISBbits	set	3987
+    14                           
+    15 ;;
+    16 ;;Main: autosize = 0, tempsize = 1, incstack = 0, save=0
+    17 ;;
+    18 ;; *************** function _main *****************
+    19 ;; Defined at:
+    20 ;;		line 28 in file "PICLED.c"
+    21 ;; Parameters:    Size  Location     Type
+    22 ;;		None
+    23 ;; Auto vars:     Size  Location     Type
+    24 ;;  delay           2    1[COMRAM] int 
+    25 ;; Return value:  Size  Location     Type
+    26 ;;		None               void
+    27 ;; Registers used:
+    28 ;;		wreg, status,2, status,0, cstack
+    29 ;; Tracked objects:
+    30 ;;		On entry : 0/0
+    31 ;;		On exit  : 0/0
+    32 ;;		Unchanged: 0/0
+    33 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+    34 ;;      Params:         0       0       0       0       0       0       0       0       0
+    35 ;;      Locals:         2       0       0       0       0       0       0       0       0
+    36 ;;      Temps:          1       0       0       0       0       0       0       0       0
+    37 ;;      Totals:         3       0       0       0       0       0       0       0       0
+    38 ;;Total ram usage:        3 bytes
+    39 ;; Hardware stack levels required when called:    1
+    40 ;; This function calls:
+    41 ;;		_configOscillator
+    42 ;; This function is called by:
+    43 ;;		Startup code after reset
+    44 ;; This function uses a non-reentrant model
+    45 ;;
+    46                           
+    47                           	psect	text0
+    48  007FCC                     __ptext0:
+    49                           	opt stack 0
+    50  007FCC                     _main:
+    51                           	opt stack 30
+    52                           
+    53                           ;PICLED.c: 30: TRISBbits.RB0 = 0;
+    54                           
+    55                           ;incstack = 0
+    56  007FCC  9093               	bcf	3987,0,c	;volatile
+    57                           
+    58                           ;PICLED.c: 32: configOscillator();
+    59  007FCE  ECE0  F03F         	call	_configOscillator	;wreg free
+    60  007FD2                     l601:
+    61                           
+    62                           ;PICLED.c: 35: {
+    63                           ;PICLED.c: 36: LATBbits.LATB0 = ~LATBbits.LATB0;
+    64  007FD2  708A               	btg	3978,0,c	;volatile
+    65                           
+    66                           ;PICLED.c: 37: for(int delay = 0; delay < 20; delay++) _delay((unsigned long)((50)*(8000
+      +                          000/4000.0)));
+    67  007FD4  0E00               	movlw	0
+    68  007FD6  6E03               	movwf	main@delay+1,c
+    69  007FD8  0E00               	movlw	0
+    70  007FDA  6E02               	movwf	main@delay,c
+    71  007FDC  5003               	movf	main@delay+1,w,c
+    72  007FDE  0A80               	xorlw	128
+    73  007FE0  0F80               	addlw	-128
+    74  007FE2  0E14               	movlw	20
+    75  007FE4  B4D8               	btfsc	status,2,c
+    76  007FE6  5C02               	subwf	main@delay,w,c
+    77  007FE8  B0D8               	btfsc	status,0,c
+    78  007FEA  D7F3               	goto	l601
+    79  007FEC  0E82               	movlw	130
+    80  007FEE  6E01               	movwf	??_main& (0+255),c
+    81  007FF0  0EDE               	movlw	222
+    82  007FF2                     u37:
+    83  007FF2  2EE8               	decfsz	wreg,f,c
+    84  007FF4  D7FE               	goto	u37
+    85  007FF6  2E01               	decfsz	??_main& (0+255),f,c
+    86  007FF8  D7FC               	goto	u37
+    87  007FFA  4A02               	infsnz	main@delay,f,c
+    88  007FFC  2A03               	incf	main@delay+1,f,c
+    89  007FFE  D7EE               	goto	L1
+    90  008000                     __end_of_main:
+    91                           	opt stack 0
+    92                           wreg	equ	0xFE8
+    93                           status	equ	0xFD8
+    94                           
+    95                           	psect	cinit
+    96  007FC6                     __pcinit:
+    97                           	opt stack 0
+    98  007FC6                     start_initialization:
+    99                           	opt stack 0
+   100  007FC6                     __initialization:
+   101                           	opt stack 0
+   102  007FC6                     end_of_initialization:
+   103                           	opt stack 0
+   104  007FC6                     __end_of__initialization:
+   105                           	opt stack 0
+   106  007FC6  0100               	movlb	0
+   107  007FC8  EFE6  F03F         	goto	_main	;jump to C main() function
+   108                           wreg	equ	0xFE8
+   109                           status	equ	0xFD8
+   110                           
+   111                           	psect	cstackCOMRAM
+   112  000001                     __pcstackCOMRAM:
+   113                           	opt stack 0
+   114  000001                     ??_main:
+   115                           
+   116                           ; 0 bytes @ 0x0
+   117  000001                     	ds	1
+   118  000002                     main@delay:
+   119                           	opt stack 0
+   120                           
+   121                           ; 2 bytes @ 0x1
+   122  000002                     	ds	2
+   123                           wreg	equ	0xFE8
+   124                           status	equ	0xFD8
+   125                           
+   126 ;; *************** function _configOscillator *****************
+   127 ;; Defined at:
+   128 ;;		line 13 in file "PICLED.c"
+   129 ;; Parameters:    Size  Location     Type
+   130 ;;		None
+   131 ;; Auto vars:     Size  Location     Type
+   132 ;;		None
+   133 ;; Return value:  Size  Location     Type
+   134 ;;		None               void
+   135 ;; Registers used:
+   136 ;;		wreg, status,2
+   137 ;; Tracked objects:
+   138 ;;		On entry : 0/0
+   139 ;;		On exit  : 0/0
+   140 ;;		Unchanged: 0/0
+   141 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+   142 ;;      Params:         0       0       0       0       0       0       0       0       0
+   143 ;;      Locals:         0       0       0       0       0       0       0       0       0
+   144 ;;      Temps:          0       0       0       0       0       0       0       0       0
+   145 ;;      Totals:         0       0       0       0       0       0       0       0       0
+   146 ;;Total ram usage:        0 bytes
+   147 ;; Hardware stack levels used:    1
+   148 ;; This function calls:
+   149 ;;		Nothing
+   150 ;; This function is called by:
+   151 ;;		_main
+   152 ;; This function uses a non-reentrant model
+   153 ;;
+   154                           
+   155                           	psect	text1
+   156  007FC0                     __ptext1:
+   157                           	opt stack 0
+   158  007FC0                     _configOscillator:
+   159                           	opt stack 30
+   160                           
+   161                           ;PICLED.c: 25: OSCCON = 0x66;
+   162                           
+   163                           ;incstack = 0
+   164  007FC0  0E66               	movlw	102
+   165  007FC2  6ED3               	movwf	4051,c	;volatile
+   166  007FC4  0012               	return	
+   167  007FC6                     __end_of_configOscillator:
+   168                           	opt stack 0
+   169  0000                     wreg	equ	0xFE8
+   170                           status	equ	0xFD8
+   171                           wreg	equ	0xFE8
+   172                           status	equ	0xFD8
+   173                           
+   174                           	psect	rparam
+   175  0000                     wreg	equ	0xFE8
+   176                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      3       3
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 3     3      0      30
+                                              0 COMRAM     3     3      0
+                   _configOscillator
+ ---------------------------------------------------------------------------------
+ (1) _configOscillator                                     0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _configOscillator
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             100      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      3       3       1        3.2%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+ABS                  0      0       0       6        0.0%
+BITBANK1           100      0       0       7        0.0%
+BANK1              100      0       0       8        0.0%
+BITBANK2           100      0       0       9        0.0%
+BANK2              100      0       0      10        0.0%
+BITBANK3           100      0       0      11        0.0%
+BANK3              100      0       0      12        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BIGRAM             7FF      0       0      21        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.33 build 59893 
+Symbol Table                                                                                   Thu Jan 08 13:06:12 2015
+
+                       u37 7FF2               __CFG_CP0$OFF 000000               __CFG_CP1$OFF 000000  
+             __CFG_CP2$OFF 000000               __CFG_CP3$OFF 000000                        l601 7FD2  
+             __CFG_CPB$OFF 000000               __CFG_CPD$OFF 000000                        wreg 000FE8  
+             __CFG_LVP$OFF 000000                       _main 7FCC              __CFG_BORV$190 000000  
+                     start 0000              __CFG_IESO$OFF 000000              __CFG_MCLRE$ON 000000  
+                    ?_main 0001              __CFG_WDTEN$ON 000000              __CFG_WRT0$OFF 000000  
+            __CFG_WRT1$OFF 000000              __CFG_WRT2$OFF 000000              __CFG_WRT3$OFF 000000  
+           __CFG_EBTR0$OFF 000000             __CFG_FCMEN$OFF 000000             __CFG_EBTR1$OFF 000000  
+           __CFG_EBTR2$OFF 000000             __CFG_EBTR3$OFF 000000  __size_of_configOscillator 0006  
+            __CFG_WRTB$OFF 000000              __CFG_WRTC$OFF 000000              __CFG_WRTD$OFF 000000  
+           __CFG_EBTRB$OFF 000000                      status 000FD8             __CFG_T3CMX$RC0 000000  
+           __CFG_ICPRT$OFF 000000            __initialization 7FC6               __end_of_main 8000  
+           __CFG_PCLKEN$ON 000000                     ??_main 0001              __activetblptr 000000  
+           __CFG_SDOMX$RB3 000000            __CFG_CCP2MX$RC1 000000                     _OSCCON 000FD3  
+           __CFG_XINST$OFF 000000             __CFG_STVREN$ON 000000       __CFG_LS48MHZ$SYS24X4 000000  
+               __accesstop 0060    __end_of__initialization 7FC6            __CFG_PBADEN$OFF 000000  
+           __pcstackCOMRAM 0001           __CFG_nPWRTEN$OFF 000000           _configOscillator 7FC0  
+        __CFG_PLLSEL$PLL4X 000000                    __Hparam 0000                    __Lparam 0000  
+                  __pcinit 7FC6                    __ramtop 0800                    __ptext0 7FCC  
+                  __ptext1 7FC0       end_of_initialization 7FC6                  _TRISBbits 000F93  
+ __end_of_configOscillator 7FC6        start_initialization 7FC6            __CFG_nLPBOR$OFF 000000  
+                 _LATBbits 000F8A           __CFG_WDTPS$32768 000000                  main@delay 0002  
+        __CFG_CFGPLLEN$OFF 000000                   __Hrparam 0000                   __Lrparam 0000  
+       __CFG_BOREN$SBORDIS 000000          ?_configOscillator 0001         ??_configOscillator 0001  
+            __size_of_main 0034       __CFG_CPUDIV$NOCLKDIV 000000         __CFG_FOSC$INTOSCIO 000000  
