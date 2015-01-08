@@ -1,0 +1,9 @@
+_configUSART: CODE, 2260 0 22
+_configOscillator: CODE, 2316 0 6
+__stringdata: SMALLCONST, 2049 0 14
+_main: CODE, 2152 0 64
+__initialization: CODE, 2300 0 2
+_Write1USART: CODE, 2282 0 18
+_putrs1USART: CODE, 2216 0 44
+_Open1USART: CODE, 2064 0 88
+Total: 258
