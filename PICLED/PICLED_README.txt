@@ -20,7 +20,9 @@ Documentation
 	This program should be generic enough to change the device being used.
 	To change the device in MPLABX use the project properties dialog.
 	Check your device datasheet for the pin number of PORTB RB0.
-	The Schematic can be found in the Schematic Folder.
+	The Schematic can be found in the PICLEDSCHEMATIC folder.
+	Schematic has been made using KiCAD EDA. 
+	PDF and PNG images of schematic can also be found PICLEDSCHEMATIC folder 
 	The Schematic shows minimum connections for PIC18F45K50, LED, and PICKit3.
 	The PIC18F45K50 can be powered by a range of voltages. 
 	The Schematic assumes VCC = 5 Volts.

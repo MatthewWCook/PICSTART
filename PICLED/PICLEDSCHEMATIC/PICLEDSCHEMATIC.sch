@@ -1,0 +1,235 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:MCPARTS
+LIBS:PICLEDSCHEMATIC-cache
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "9 jan 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L PIC18F45K50 U?
+U 1 1 54B02B66
+P 6300 4350
+F 0 "U?" H 5250 5350 60  0000 C CNN
+F 1 "PIC18F45K50" H 7050 3150 60  0000 C CNN
+F 2 "~" H 6300 4350 60  0000 C CNN
+F 3 "~" H 6300 4350 60  0000 C CNN
+	1    6300 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 54B02B7F
+P 7850 4300
+F 0 "#PWR?" H 7850 4400 30  0001 C CNN
+F 1 "VCC" H 7850 4400 30  0000 C CNN
+F 2 "" H 7850 4300 60  0000 C CNN
+F 3 "" H 7850 4300 60  0000 C CNN
+	1    7850 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54B02B98
+P 7850 4450
+F 0 "#PWR?" H 7850 4450 30  0001 C CNN
+F 1 "GND" H 7850 4380 30  0001 C CNN
+F 2 "" H 7850 4450 60  0000 C CNN
+F 3 "" H 7850 4450 60  0000 C CNN
+	1    7850 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 4400 7850 4400
+Wire Wire Line
+	7850 4400 7850 4450
+Wire Wire Line
+	7650 4300 7850 4300
+$Comp
+L VCC #PWR?
+U 1 1 54B0312A
+P 4800 4500
+F 0 "#PWR?" H 4800 4600 30  0001 C CNN
+F 1 "VCC" H 4800 4600 30  0000 C CNN
+F 2 "" H 4800 4500 60  0000 C CNN
+F 3 "" H 4800 4500 60  0000 C CNN
+	1    4800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 54B03130
+P 4800 4650
+F 0 "#PWR?" H 4800 4650 30  0001 C CNN
+F 1 "GND" H 4800 4580 30  0001 C CNN
+F 2 "" H 4800 4650 60  0000 C CNN
+F 3 "" H 4800 4650 60  0000 C CNN
+	1    4800 4650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4500 4900 4500
+Wire Wire Line
+	4900 4600 4800 4600
+Wire Wire Line
+	4800 4600 4800 4650
+$Comp
+L LED D?
+U 1 1 54B03187
+P 8200 4100
+F 0 "D?" H 8200 4200 50  0000 C CNN
+F 1 "LED" H 8200 4000 50  0000 C CNN
+F 2 "~" H 8200 4100 60  0000 C CNN
+F 3 "~" H 8200 4100 60  0000 C CNN
+	1    8200 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 54B031A0
+P 8550 4350
+F 0 "R?" V 8630 4350 40  0000 C CNN
+F 1 "330" V 8557 4351 40  0000 C CNN
+F 2 "~" V 8480 4350 30  0000 C CNN
+F 3 "~" H 8550 4350 30  0000 C CNN
+	1    8550 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8400 4100 8550 4100
+Wire Wire Line
+	8000 4100 7750 4100
+Wire Wire Line
+	7750 4100 7750 4200
+Wire Wire Line
+	7750 4200 7650 4200
+$Comp
+L GND #PWR?
+U 1 1 54B03231
+P 8550 4750
+F 0 "#PWR?" H 8550 4750 30  0001 C CNN
+F 1 "GND" H 8550 4680 30  0001 C CNN
+F 2 "" H 8550 4750 60  0000 C CNN
+F 3 "" H 8550 4750 60  0000 C CNN
+	1    8550 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4600 8550 4700
+Wire Wire Line
+	8550 4700 8550 4750
+$Comp
+L CONN_6 P?
+U 1 1 54B03261
+P 6350 2450
+F 0 "P?" V 6300 2450 60  0000 C CNN
+F 1 "PICKIT3 HDR" V 6400 2450 60  0000 C CNN
+F 2 "" H 6350 2450 60  0000 C CNN
+F 3 "" H 6350 2450 60  0000 C CNN
+	1    6350 2450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L VCC #PWR?
+U 1 1 54B032C8
+P 4600 2850
+F 0 "#PWR?" H 4600 2950 30  0001 C CNN
+F 1 "VCC" H 4600 2950 30  0000 C CNN
+F 2 "" H 4600 2850 60  0000 C CNN
+F 3 "" H 4600 2850 60  0000 C CNN
+	1    4600 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R?
+U 1 1 54B032D0
+P 4600 3250
+F 0 "R?" V 4680 3250 40  0000 C CNN
+F 1 "10K" V 4607 3251 40  0000 C CNN
+F 2 "~" V 4530 3250 30  0000 C CNN
+F 3 "~" H 4600 3250 30  0000 C CNN
+	1    4600 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4600 3000 4600 2850
+Wire Wire Line
+	4600 3500 4750 3500
+Wire Wire Line
+	4750 3500 4900 3500
+NoConn ~ 6600 2800
+Wire Wire Line
+	4750 3500 4750 3000
+Wire Wire Line
+	4750 3000 6100 3000
+Wire Wire Line
+	6100 3000 6100 2800
+Connection ~ 4750 3500
+Wire Wire Line
+	7650 3500 7650 3150
+Wire Wire Line
+	7650 3150 6400 3150
+Wire Wire Line
+	6400 3150 6400 2800
+Wire Wire Line
+	7750 3600 7650 3600
+Wire Wire Line
+	7750 3050 7750 3600
+Wire Wire Line
+	7750 3050 6500 3050
+Wire Wire Line
+	6500 3050 6500 2800
+NoConn ~ 6200 2800
+$Comp
+L GND #PWR?
+U 1 1 54B0334E
+P 6300 2950
+F 0 "#PWR?" H 6300 2950 30  0001 C CNN
+F 1 "GND" H 6300 2880 30  0001 C CNN
+F 2 "" H 6300 2950 60  0000 C CNN
+F 3 "" H 6300 2950 60  0000 C CNN
+	1    6300 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 2800 6300 2950
+$EndSCHEMATC
