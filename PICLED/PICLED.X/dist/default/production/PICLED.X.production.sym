@@ -207,8 +207,8 @@ cinit 7FC6 7FCB CODE 7FC6 0
 text1 7FC0 7FC5 CODE 7FC0 0
 %locals
 dist/default/production\PICLED.X.production.obj
-C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f45k50.h
-C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f45k50.h
+C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\pic18f45k50.h
+C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\pic18f45k50.h
 5314 7FCC 0 CODE 0
 PICLED.c
 28 7FCC 0 CODE 0
@@ -216,7 +216,7 @@ PICLED.c
 32 7FCE 0 CODE 0
 36 7FD2 0 CODE 0
 37 7FD4 0 CODE 0
-C:\Users\MCOOK\AppData\Local\Temp\s2qo.
+C:\Users\Z\AppData\Local\Temp\s3o4.
 633 7FC6 0 CODE 0
 635 7FC6 0 CODE 0
 638 7FC6 0 CODE 0
