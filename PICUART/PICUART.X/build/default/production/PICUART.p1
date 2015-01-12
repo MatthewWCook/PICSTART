@@ -1,19 +1,19 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"13104 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f45k50.h
+"13104 C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\pic18f45k50.h
 [v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
-"214 C:\Program Files (x86)\Microchip\xc8\v1.33\include\plib\usart.h
+"214 C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\plib\usart.h
 [v _Open1USART `(v ~T0 @X0 0 ef2`uc`ui ]
 [p mainexit ]
 "248
 [v _putrs1USART `(v ~T0 @X0 0 ef1`*Cuc ]
 [v F7343 `(v ~T0 @X0 1 tf1`ul ]
-"147 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18.h
+"147 C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\pic18.h
 [v __delay `JF7343 ~T0 @X0 0 e ]
 [p i __delay ]
 [; ;htc.h: 21: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 24: extern void __builtin_software_breakpoint(void);
 [; ;pic18f45k50.h: 47: extern volatile unsigned char SRCON1 @ 0xF57;
-"49 C:\Program Files (x86)\Microchip\xc8\v1.33\include\pic18f45k50.h
+"49 C:\PROGRAM FILES (X86)\MICROCHIP\XC8\V1.33\include\pic18f45k50.h
 [; ;pic18f45k50.h: 49: asm("SRCON1 equ 0F57h");
 [; <" SRCON1 equ 0F57h ;# ">
 [; ;pic18f45k50.h: 52: typedef union {
@@ -6820,31 +6820,31 @@ Version 3.2 HI-TECH Software Intermediate Code
 "39
 [e :UE 940 ]
 }
-"41
-[v _main `(v ~T0 @X0 1 ef ]
 "42
+[v _main `(v ~T0 @X0 1 ef ]
+"43
 {
-[; ;PICUART.c: 41: void main(void)
-[; ;PICUART.c: 42: {
+[; ;PICUART.c: 42: void main(void)
+[; ;PICUART.c: 43: {
 [e :U _main ]
 [f ]
-[; ;PICUART.c: 43: configOscillator();
-"43
-[e ( _configOscillator ..  ]
-[; ;PICUART.c: 44: configUSART();
+[; ;PICUART.c: 44: configOscillator();
 "44
+[e ( _configOscillator ..  ]
+[; ;PICUART.c: 45: configUSART();
+"45
 [e ( _configUSART ..  ]
-[; ;PICUART.c: 46: while(1)
-"46
-[e :U 943 ]
-[; ;PICUART.c: 47: {
+[; ;PICUART.c: 47: while(1)
 "47
-{
-[; ;PICUART.c: 48: putrs1USART("Hello World!\n");
+[e :U 943 ]
+[; ;PICUART.c: 48: {
 "48
-[e ( _putrs1USART (1 :s 1C ]
-[; ;PICUART.c: 49: for(int delay = 0; delay < 20; delay++) _delay((unsigned long)((50)*(8000000/4000.0)));
+{
+[; ;PICUART.c: 49: putrs1USART("Hello World!\r\n");
 "49
+[e ( _putrs1USART (1 :s 1C ]
+[; ;PICUART.c: 50: for(int delay = 0; delay < 20; delay++) _delay((unsigned long)((50)*(8000000/4000.0)));
+"50
 {
 [v _delay `i ~T0 @X0 1 a ]
 [e = _delay -> 0 `i ]
@@ -6856,16 +6856,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $ < _delay -> 20 `i 945  ]
 [e :U 946 ]
 }
-"50
+"51
 }
 [e :U 942 ]
-"46
+"47
 [e $U 943  ]
 [e :U 944 ]
-[; ;PICUART.c: 50: }
 [; ;PICUART.c: 51: }
-"51
+[; ;PICUART.c: 52: }
+"52
 [e :UE 941 ]
 }
-[a 1C 72 101 108 108 111 32 87 111 114 108 100 33 10 0 ]
+[a 1C 72 101 108 108 111 32 87 111 114 108 100 33 13 10 0 ]
 

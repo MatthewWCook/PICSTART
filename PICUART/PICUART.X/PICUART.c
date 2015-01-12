@@ -38,6 +38,7 @@ void configUSART(void)
     Open1USART(config, spbrg);
 }
 
+
 void main(void)
 {
     configOscillator(); // Config OSCCON Register for Internal Osc at 8MHz
@@ -45,7 +46,7 @@ void main(void)
 
     while(1)
     {
-        putrs1USART("Hello World!\n");
+        putrs1USART("Hello World!\r\n");
         for(int delay = 0; delay < 20; delay++) __delay_ms(50); // 1 sec delay
     }
 }
