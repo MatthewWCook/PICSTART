@@ -1,0 +1,21 @@
+_configUSART: CODE, 5346 0 22
+___awdiv: CODE, 4728 0 164
+_configOscillator: CODE, 5428 0 6
+__stringdata: SMALLCONST, 2059 0 59
+_putch: CODE, 5402 0 14
+_dpowers: SMALLCONST, 2049 0 10
+_main: CODE, 4456 0 272
+_configDS1307: CODE, 5386 0 16
+__initialization: CODE, 5416 0 2
+___lwdiv: CODE, 5100 0 82
+_rtc_get_time: CODE, 3204 0 812
+_rtc_set_time: CODE, 2120 0 1084
+_isdigit: CODE, 5288 0 32
+_Write1USART: CODE, 5368 0 18
+_printf: CODE, 4016 0 440
+___lwmod: CODE, 5182 0 66
+_ReadI2C1: CODE, 5248 0 40
+_WriteI2C1: CODE, 4892 0 120
+_Open1USART: CODE, 5012 0 88
+_OpenI2C1: CODE, 5320 0 26
+Total: 3373
