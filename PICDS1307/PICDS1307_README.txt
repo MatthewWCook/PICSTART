@@ -37,6 +37,7 @@ Additional Notes
 	PIC18F45K50 USART pins 25 (TX) and 26 (RX).  
 	PIC18F45K50 I2C pins 33 (SDA) and 34 (SCL). 
 	MPLABX XC8 Compiler
+	PLIB PConfig I2C_V6_2 / I2C_IO_V3 which is defined in I2C.H to give the above SDA and SCL Pin Numbers
 	PICKit3 Programmer
 	MPLAB_XC8_Peripheral_Libraries.pdf (Microchip Website)
 -------------------------------------------------------------------------------
