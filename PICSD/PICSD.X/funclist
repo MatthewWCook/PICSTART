@@ -1,0 +1,24 @@
+_configUSART: CODE, 30368 0 22
+_configOscillator: CODE, 30330 0 6
+__stringdata: MEDIUMCONST, 32387 0 380
+_putch: CODE, 30336 0 14
+_disk_readsector: CODE, 30884 0 110
+_SPI_send_cmd: CODE, 31156 0 176
+_disk_initialize: CODE, 30390 0 24
+_dpowers: MEDIUMCONST, 32369 0 10
+_main: CODE, 30640 0 74
+_disk_readsectordata: CODE, 30994 0 162
+__initialization: CODE, 30504 0 22
+___lwdiv: CODE, 30714 0 82
+_SD_Init: CODE, 31332 0 350
+_isdigit: CODE, 30472 0 32
+_hexpowers: MEDIUMCONST, 32379 0 8
+_Write1USART: CODE, 30350 0 18
+_SPI_MC_Close: CODE, 30326 0 4
+_SPI_MC_Write: CODE, 30442 0 30
+_printf: CODE, 31682 0 686
+___lwmod: CODE, 30574 0 66
+___wmul: CODE, 30536 0 38
+_Open1USART: CODE, 30796 0 88
+_SPI_MC_Initialize: CODE, 30414 0 28
+Total: 2430
